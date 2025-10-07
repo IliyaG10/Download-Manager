@@ -1,0 +1,32 @@
+services:
+  database:
+    image: postgres:16
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=ghaedi
+      - POSTGRES_PASSWORD=lionelmessi
+      - POSTGRES_DB=download_manager
+    ports:
+      - "5432:5432"
+    networks:
+      - golden-gate
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@example.com
+      - PGADMIN_DEFAULT_PASSWORD=admin123
+    ports:
+      - "8080:80"
+    depends_on:
+      - database
+    networks:
+      - golden-gate
+
+volumes:
+  postgres_data:
+
+networks:
+  golden-gate:
+    driver: bridge
