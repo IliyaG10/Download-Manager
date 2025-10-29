@@ -1,4 +1,4 @@
-module brain
+module github.com/IliyaG10/Download-Manager/brain
 
 go 1.25.3
 
