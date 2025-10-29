@@ -5,8 +5,6 @@ import (
 	"time"
 )
 
-
-
 type DownloadWorker struct {
 	ID int64
 	Partiton Partiton
