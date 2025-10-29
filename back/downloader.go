@@ -13,7 +13,7 @@ package main
 // 	"strconv"
 // 	"time"
 
-// 	"github.com/IliyaG10/Download-Manager/common"
+// 	"github.com/IliyaG10/Download-Manager/dataType"
 // )
 
 
@@ -26,7 +26,7 @@ package main
 // 	Ctx context.Context
 
 // }
-
+// 
 
 // type WorkerHandler struct {
 // 	ID int64

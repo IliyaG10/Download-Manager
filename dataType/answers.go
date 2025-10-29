@@ -1,4 +1,4 @@
-package common
+package datatype
 
 import "context"
 
@@ -14,6 +14,8 @@ const (
 	Paused       = "paused"
 	Failed       = "failed"
 	NotCompelete = "notcompelete"
+	Healthy = "alive"
+	Dead = "dead"
 )
 
 type Partiton struct {
@@ -33,9 +35,25 @@ type DownloadResponse struct {
 	Partitions    []Partiton
 }
  
-
-type Result struct {
-	// using the exited const here
+type LeaderResponse struct {
 	Status string
+	ID int
+	WorkerConditions []Partiton
+}
+
+
+type DatabaseRequest struct {
+	// using the exited const here
+	Order string
 	Err error
+}
+
+type DatabaseAnswer struct {
+
+}
+
+
+type LeaderConn struct {
+	LeaderConnAns chan DownloadResponse
+	LeaderConnRecive chan LeaderResponse
 }
