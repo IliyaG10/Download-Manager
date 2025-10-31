@@ -18,6 +18,7 @@ type Connections struct {
 var  (
 	instance *Connections
 	once sync.Once
+	
 )
 
 
