@@ -2,10 +2,7 @@ module github.com/IliyaG10/Download-Manager/database
 
 go 1.25.3
 
-require (
-	github.com/IliyaG10/Download-Manager/common v0.0.0-20251030174525-0ab3916d852e
-	modernc.org/sqlite v1.39.1
-)
+
 
 require (
 	github.com/dustin/go-humanize v1.0.1 // indirect
